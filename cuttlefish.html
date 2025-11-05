@@ -1,5 +1,3 @@
-</html>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -642,18 +640,31 @@ margin-bottom: 100px;
           }
         }
 
-
+        
 .team-section {
-  color: #333333;            /* Text color */
+  color: #ffffff;            /* Text color */
   padding: 60px 20px;        /* Space inside the section */
   text-align: center;
 align-items: center;
 Justify-content: center;
   border-top: 4px solid #333333; /* Optional top border for separation */
-  background-color: #F3A738;
-    /*background-image: linear-gradient(to bottom,#FF0000, #FFFF00,#2BC016,#2416c0,#9b16c0); */
+  background-color: #0E1B4A;
+    background-image: linear-gradient(to bottom,#0E1B4A, #0F1C32,#0F1C32);
 
 
+}
+.bg-image2 {
+          position: absolute;
+          left: 350px;
+          width: 50%;
+          height: 90%;
+          object-fit: cover; /* makes image cover container */
+          z-index: 0;
+        }
+
+.team-section > *:not(.bg-image2) {
+  position: relative;
+  z-index: 1;
 }
 
 .team-section h2 {
@@ -663,7 +674,7 @@ Justify-content: center;
 
 .team-section h3 {
   font-size: 1em;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 Text-align: center;
 }
 
@@ -693,9 +704,8 @@ Overflow: hidden;
 
 .team-members2 {
   display: flex;
-align-items: center;
 
-  gap: 50px;
+  gap: var(--mentor-gap, 3.25vw);
   margin-top: 40px;
 Margin-left: 0px;
 Width: 85vw;
@@ -703,36 +713,53 @@ transition: transform 1s ease-in-out;
 
 }
 
+.team-memberdesc {
+  background-color: rgba(255, 255, 255, 0.87);
+
+display: flex;
+flex-direction: column;
+  padding: 1vw;
+  border-radius: 10px;
+height: var(--memberdesc-height, 250px);
+width: 44vw; /* mentor width the member width is controled in team-memberwrapper I think */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow around the cards */
+}
+
 .team-member {
-  background-color: #ffffff;
 
 display: flex;
 flex-direction: row;
 text-align: right;
-  padding: 1vw;
-  border-radius: 10px;
-height: 250px;
-width: 100vw;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow around the cards */
+height: calc(100px*var(--memberimg-height, 1.2));
+margin-bottom: 20px;
+width: var(--member-width, 16vw); /* allow mentor page to have its own width */
 }
 
 .team-membertxt {
 color: #333333; 
 Display: flex;
 Flex-direction: column;
-Width: 9vw;
+font-size: var(--memebertxt-size, null);
+Width: 40vw;
+height: calc(100px*var(--memberimg-height, 1.2));
+margin-top: calc(10px*var(--memberimg-height, 0));
 Text-align: center;
 }
 
 .team-member img {
 display: flex;
 flex-direction: left;
-  width: 100px;
-  height: 100px;
+  width: calc(100px*var(--memberimg-width, 1));
+  height: calc(100px*var(--memberimg-height, 1.2));
   border-radius: 10%; /* Makes the image a circle */
   object-fit: cover;
 flex-string: 0;
   margin-bottom: 10px;
+}
+
+.team-memberdesctxt {
+color: #333333; 
+Width: var(--member-width, 16vw);
 }
 
 .team-button_right {
@@ -847,110 +874,180 @@ position: absolute;
   </div>
 </div>
 
-
 <section id="team" class="team-section">
+  <img src="cuttlefish2.png" alt="Cuttlefish Logo" class="bg-image2" />
   <h2> Meet the Team</h2>
   <p>Our passionate team is dedicated to solving world wide problems, philanthropy, and most importantly wealth.</p>
   <div class="team-members-wrapper">
 <div class="team-members">
 <div id="team-members2" class="team-members2">
+  <div class="team-memberdesc">
     <div class="team-member">
   <img src="https://links.renertschool.ca/static/photobook/2025-Kfir-Rousso-gr10-147.jpg" alt="Dr. Marina Blue">
 	<div class="team-membertxt">
       <h3>KFIR</h3>
       <p>Sigma Programmer</p>
+      </div>
     </div>
+      <div class="team-memberdesctxt">
+        <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+      </div>
     </div>
+    <div class="team-memberdesc">
     <div class="team-member">
       <img src="https://links.renertschool.ca/static/photobook/2025-Hayden-Shaigec-gr10-566.jpg" alt="Captain Coral">
 <div class="team-membertxt">
       <h3>HAYDEN</h3>
       <p>Team Captain</p>
     </div>
+    </div>
+    <div class="team-memberdesctxt">
+      <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+    </div>
 </div>
+<div class="team-memberdesc">
     <div class="team-member">
-      <img src="https://links.renertschool.ca/static/photobook/2023-gidrewicz-simon.jpg" alt="Sandy Shores">
+      <img src="https://links.renertschool.ca/static/photobook/2025-Simon-Gidrewicz-gr10-502.jpg" alt="Sandy Shores">
       <div class="team-membertxt">
 <h3>SIMON</h3>
       <p>Sigma Programmer</p>
     </div>
+    </div>
+    <div class="team-memberdesctxt">
+      <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+    </div>
 </div>
+<div class="team-memberdesc">
 <div class="team-member">
       <img src="https://links.renertschool.ca/static/photobook/2025-Eshan-Saini-gr10-600.jpg" alt="Sandy Shores">
 <div class="team-membertxt">
       <h3>Eshan</h3>
       <p>Kinda Weird</p>
     </div>
+  </div>
+  <div class="team-memberdesctxt">
+    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+  </div>
 </div>
+<div class="team-memberdesc">
 <div class="team-member">
-      <img src="/static/photobook/2023-moroz-landry.jpg" alt="Landry">
+      <img src="https://links.renertschool.ca/static/photobook/2023-moroz-landry.jpg" alt="Captain Coral">
 <div class="team-membertxt">
       <h3>Landry</h3>
       <p>Assistant TO the Team Captain</p>
     </div>
+  </div>
+  <div class="team-memberdesctxt">
+    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+  </div>
 </div>
+<div class="team-memberdesc">
 <div class="team-member">
       <img src="https://links.renertschool.ca/static/photobook/2025-Lucas-Wang-gr10-695.jpg" alt="Sandy Shores">
       <div class="team-membertxt">
 <h3>Lucas W</h3>
       <p>Cad Designer</p>
     </div>
+  </div>
+  <div class="team-memberdesctxt">
+    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+  </div>
 </div>
-<div class="team-member">
-      <img src="https://links.renertschool.ca/static/photobook/2025-Lucas-Cheung-gr9-129.jpg" alt="Lucas C">
-<div class="team-membertxt">
-      <h3>Lucas C</h3>
-      <p>Cad Designer</p>
-    </div>
-</div>
-<div class="team-member">
-  <img src="https://links.renertschool.ca/static/photobook/2025-Kfir-Rousso-gr10-147.jpg" alt="Dr. Marina Blue">
-	<div class="team-membertxt">
-      <h3>KFIR</h3>
-      <p>Sigma Programmer</p>
-    </div>
-</div>
-<div class="team-member">
-      <img src="https://links.renertschool.ca/static/photobook/2025-Hayden-Shaigec-gr10-566.jpg" alt="Captain Coral">
-<div class="team-membertxt">
-      <h3>HAYDEN</h3>
-      <p>Team Captain</p>
-    </div>
-</div>
-<div class="team-member">
-      <img src="https://links.renertschool.ca/static/photobook/2023-gidrewicz-simon.jpg" alt="Sandy Shores">
-      <div class="team-membertxt">
-<h3>SIMON</h3>
-      <p>Sigma Programmer</p>
-    </div>
-</div>
+<div class="team-memberdesc">
 <div class="team-member">
       <img src="https://links.renertschool.ca/static/photobook/2025-Eshan-Saini-gr10-600.jpg" alt="Sandy Shores">
 <div class="team-membertxt">
-      <h3>Eshan</h3>
-      <p>Kinda Weird</p>
-    </div>
-</div>
-<div class="team-member">
-      <img src="/2023-moroz-landry.jpg" alt="Landry">
-<div class="team-membertxt">
-      <h3>Landry</h3>
-      <p>Assistant TO the Team Captain</p>
-    </div>
-</div>
-<div class="team-member">
-      <img src="https://links.renertschool.ca/static/photobook/2025-Lucas-Wang-gr10-695.jpg" alt="Sandy Shores">
-      <div class="team-membertxt">
-<h3>Lucas W</h3>
-      <p>Cad Designer</p>
-    </div>
-</div>
-<div class="team-member">
-      <img src="https://links.renertschool.ca/static/photobook/2025-Lucas-Cheung-gr9-129.jpg" alt="Lucas C">
-<div class="team-membertxt">
       <h3>Lucas C</h3>
       <p>Cad Designer</p>
     </div>
+  </div>
+  <div class="team-memberdesctxt">
+    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+  </div>
+</div>
+<div class="team-memberdesc">
+  <div class="team-member">
+<img src="https://links.renertschool.ca/static/photobook/2025-Kfir-Rousso-gr10-147.jpg" alt="Dr. Marina Blue">
+<div class="team-membertxt">
+    <h3>KFIR</h3>
+    <p>Sigma Programmer</p>
+    </div>
+  </div>
+    <div class="team-memberdesctxt">
+      <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+    </div>
+  </div>
+  <div class="team-memberdesc">
+  <div class="team-member">
+    <img src="https://links.renertschool.ca/static/photobook/2025-Hayden-Shaigec-gr10-566.jpg" alt="Captain Coral">
+<div class="team-membertxt">
+    <h3>HAYDEN</h3>
+    <p>Team Captain</p>
+  </div>
+  </div>
+  <div class="team-memberdesctxt">
+    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+  </div>
+</div>
+<div class="team-memberdesc">
+  <div class="team-member">
+    <img src="https://links.renertschool.ca/static/photobook/2025-Simon-Gidrewicz-gr10-502.jpg" alt="Sandy Shores">
+    <div class="team-membertxt">
+<h3>SIMON</h3>
+    <p>Sigma Programmer</p>
+  </div>
+  </div>
+  <div class="team-memberdesctxt">
+    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+  </div>
+</div>
+<div class="team-memberdesc">
+<div class="team-member">
+    <img src="https://links.renertschool.ca/static/photobook/2025-Eshan-Saini-gr10-600.jpg" alt="Sandy Shores">
+<div class="team-membertxt">
+    <h3>Eshan</h3>
+    <p>Kinda Weird</p>
+  </div>
+</div>
+<div class="team-memberdesctxt">
+  <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+</div>
+</div>
+<div class="team-memberdesc">
+<div class="team-member">
+    <img src="https://links.renertschool.ca/static/photobook/2023-moroz-landry.jpg" alt="Captain Coral">
+<div class="team-membertxt">
+    <h3>Landry</h3>
+    <p>Assistant TO the Team Captain</p>
+  </div>
+</div>
+<div class="team-memberdesctxt">
+  <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+</div>
+</div>
+<div class="team-memberdesc">
+<div class="team-member">
+    <img src="https://links.renertschool.ca/static/photobook/2025-Lucas-Wang-gr10-695.jpg" alt="Sandy Shores">
+    <div class="team-membertxt">
+<h3>Lucas W</h3>
+    <p>Cad Designer</p>
+  </div>
+</div>
+<div class="team-memberdesctxt">
+  <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+</div>
+</div>
+<div class="team-memberdesc">
+<div class="team-member">
+    <img src="https://links.renertschool.ca/static/photobook/2025-Eshan-Saini-gr10-600.jpg" alt="Sandy Shores">
+<div class="team-membertxt">
+    <h3>Lucas C</h3>
+    <p>Cad Designer</p>
+  </div>
+</div>
+<div class="team-memberdesctxt">
+  <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+</div>
 </div>
 </div>
 </div>
@@ -963,10 +1060,41 @@ Onclick="startSliding(-1)">
 <
 </button>
 
+
+
 </div>
+  <h2> Mentors in our journy:</h2>
+
+  <div class="team-members2" style= "--mentor-gap: 7vw;">
+    <div class="team-memberdesc" style= "--memberdesc-height: 500px;">
+      <div class="team-member" style= "--member-width: 41vw; --memberimg-width: 3; --memberimg-height: 3;">
+          <img src="https://media.licdn.com/dms/image/v2/D4E03AQGAz3HKRpvI4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1679517406964?e=2147483647&v=beta&t=JYo07hJsYBKrLDDHe9r0W2_CGtISh6hh_lgkOVatxYc" alt="Sandy Shores">
+      <div class="team-membertxt" style="--memebertxt-size : 2em;">
+          <h3>Christian Hafalla</h3>
+          <p>Cad Mentor</p>
+        </div>
+      </div>
+      <div class="team-memberdesctxt" style="--member-width: 40vw;" >
+        <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+      </div>
+      </div>
+      <div class="team-memberdesc" style= "--memberdesc-height: 500px;">
+        <div class="team-member" style= "--member-width: 41vw; --memberimg-width: 3; --memberimg-height: 3;">
+            <img src="https://links.renertschool.ca/static/photobook/2023-wilcox-jonathan.jpg" alt="Sandy Shores">
+        <div class="team-membertxt" style="--memebertxt-size : 2em;">
+            <h3>Jonathan Wilcox</h3>
+            <p>Program Director</p>
+          </div>
+        </div>
+        <div class="team-memberdesctxt" style="--member-width: 40vw;">
+          <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+        </div>
+        </div>
+    </div>
+
+
 
 </section>
-
 
   
 <!-- 👆 Info Section Ends -->
