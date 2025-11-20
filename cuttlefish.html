@@ -43,6 +43,7 @@
     }
     
     .content {
+      background: linear-gradient(#fdfefe,#0f4ea7,#022f72);
       padding-top: 20px;
       min-height: 100vh;
       display: flex;
@@ -257,12 +258,16 @@
       font-size: 0.9rem;
     }
     .info-section {
+      background-color: #ffffff;
       display: flex;
       flex-direction: row;
       align-items: center;  /* vertically align content */
       justify-content: space-between;
-      margin: 10px;
-      gap: 2rem;
+      margin: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow around the cards */
+      border-radius: 10%;
+      gap: 5vw;
       flex-wrap: wrap;
 margin-bottom: 100px;
     }
@@ -287,7 +292,7 @@ margin-bottom: 100px;
       align-self: center;  /* center vertically inside the container */
       color: #ffffff;
       max-width: 600px;
-      margin-right: 50px;
+      margin-right: 30px;
     }
 
     .info-text h1 {
@@ -310,6 +315,7 @@ margin-bottom: 100px;
     @media (max-width: 768px) {
       .info-section {
         flex-direction: column;
+        background-color: var(--bg_color,transparent);
         align-items: center;
         text-align: center;
       }
@@ -573,7 +579,8 @@ margin-bottom: 100px;
           background-color: #a62024; /* Red */
           border-radius: 15px;
           padding: 10px;
-          margin-left: 50px;
+          margin-left: 20px;
+          margin-right: 20px;
           box-sizing: border-box;
           display: inline-block;
         }
@@ -858,6 +865,15 @@ position: absolute;
         <p>FTC Team 31663 Cuttlefish Robotics from Calgary is a rookie team bringing innovation and teamwork to the 2025 season. Based at Renert School, they're diving into robotics with creativity and determination!</p>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
 <main class="content">
 <!-- 👇 Info Section Below Gallery -->
 <!-- 👇 Info Section Wrapped in Red Box -->
@@ -868,11 +884,44 @@ position: absolute;
     </div>
   </div>
   <div class="info-text">
-    <div class="introp" style="color: #a62024; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem; margin-top: 10px; ">Our Robots</div>
     <h1><strong>What We're Building Now</strong></h1>
     <p>We're building our second-gen robot, the Cuddler UWU, designed for speed, agility, and smart automation. With the Limelight 3A for precise targeting and Pedropathing for smoother autonomous movement, it's faster and smarter than ever. Stay tuned for updates!</p>
   </div>
 </div>
+
+
+<div class="info-section">
+  <div class="info-text">
+    <h1><strong>Our Current Stats</strong></h1>
+    <p>As of now we have places 3rd in Flint Meet 1 and 4th in the North Trail Scrimmage. Setting 3 provincial records and outperforming any other Calgary based teams in Auto. We are ranked in the top 129th percentile globally!</p>
+  </div>
+  <div class="red-box-container">
+    <div class="info-image">
+      <img src="31663_stats.png" alt="Team Image">
+    </div>
+  </div>
+</div>
+
+
+<div class="info-section">
+  <div class="red-box-container">
+    <div class="info-image">
+      <img src="sonic_v2_render.png" alt="Team Image">
+    </div>
+  </div>
+  <div class="info-text">
+    <h1><strong>Tutorials And More</strong></h1>
+    <p>Our team, set towards educating and teaching rookies has created a RoboGuide for complete beginner to FTC. Going over the basics, from the begining steps of basic Cad Design to the fasinating world of code!
+      <a target="_blank" href="https://renertrobotics-ui.github.io/cuttlefishresources.html"> <u> Click Me! </u> </a>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
 
 <section id="team" class="team-section">
   <img src="cuttlefish2.png" alt="Cuttlefish Logo" class="bg-image2" />
@@ -886,7 +935,10 @@ position: absolute;
   <img src="https://links.renertschool.ca/static/photobook/2025-Kfir-Rousso-gr10-147.jpg" alt="Dr. Marina Blue">
 	<div class="team-membertxt">
       <h3>KFIR</h3>
-      <p>Sigma Programmer</p>
+      <pre>Programmer
+Website Dev
+Engineer
+      </pre>
       </div>
     </div>
       <div class="team-memberdesctxt">
@@ -898,11 +950,16 @@ position: absolute;
       <img src="https://links.renertschool.ca/static/photobook/2025-Hayden-Shaigec-gr10-566.jpg" alt="Captain Coral">
 <div class="team-membertxt">
       <h3>HAYDEN</h3>
-      <p>Team Captain</p>
+      <pre>
+Team Captain
+CAD Designer
+Engineer
+Driver Coach
+      </pre>
     </div>
     </div>
     <div class="team-memberdesctxt">
-      <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+      <p>Not true</p>
     </div>
 </div>
 <div class="team-memberdesc">
@@ -910,11 +967,13 @@ position: absolute;
       <img src="https://links.renertschool.ca/static/photobook/2025-Simon-Gidrewicz-gr10-502.jpg" alt="Sandy Shores">
       <div class="team-membertxt">
 <h3>SIMON</h3>
-      <p>Sigma Programmer</p>
+      <pre>Programmer
+Operator
+Website Dev</pre>
     </div>
     </div>
     <div class="team-memberdesctxt">
-      <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+      <p>Okay it’s prob why my code ain’t workin.</p>
     </div>
 </div>
 <div class="team-memberdesc">
@@ -922,11 +981,13 @@ position: absolute;
       <img src="https://links.renertschool.ca/static/photobook/2025-Eshan-Saini-gr10-600.jpg" alt="Sandy Shores">
 <div class="team-membertxt">
       <h3>Eshan</h3>
-      <p>Kinda Weird</p>
+      <pre>Engineer
+CAD Designer
+Outreach</pre>
     </div>
   </div>
   <div class="team-memberdesctxt">
-    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+    <p>Cristano Ronaldo Sewey</p>
   </div>
 </div>
 <div class="team-memberdesc">
@@ -934,11 +995,14 @@ position: absolute;
       <img src="https://links.renertschool.ca/static/photobook/2023-moroz-landry.jpg" alt="Captain Coral">
 <div class="team-membertxt">
       <h3>Landry</h3>
-      <p>Assistant TO the Team Captain</p>
+      <pre>Vice Captain
+Engineer
+CAD Designer
+      </pre>
     </div>
   </div>
   <div class="team-memberdesctxt">
-    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+    <p>DAMn</p>
   </div>
 </div>
 <div class="team-memberdesc">
@@ -946,23 +1010,27 @@ position: absolute;
       <img src="https://links.renertschool.ca/static/photobook/2025-Lucas-Wang-gr10-695.jpg" alt="Sandy Shores">
       <div class="team-membertxt">
 <h3>Lucas W</h3>
-      <p>Cad Designer</p>
+      <pre>Driver
+CAD Designer
+Engineer</pre>
     </div>
   </div>
   <div class="team-memberdesctxt">
-    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+    <p>thank you goat</p>
   </div>
 </div>
 <div class="team-memberdesc">
 <div class="team-member">
-      <img src="https://links.renertschool.ca/static/photobook/2025-Eshan-Saini-gr10-600.jpg" alt="Sandy Shores">
+      <img src="https://links.renertschool.ca/static/photobook/2025-Lucas-Cheung-gr9-129.jpg" alt="Sandy Shores">
 <div class="team-membertxt">
       <h3>Lucas C</h3>
-      <p>Cad Designer</p>
+      <pre>Human Player
+CAD Designer
+Engineer</pre>
     </div>
   </div>
   <div class="team-memberdesctxt">
-    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+    <p>Yo guys what time will u be there at stemia</p>
   </div>
 </div>
 <div class="team-memberdesc">
@@ -970,7 +1038,10 @@ position: absolute;
 <img src="https://links.renertschool.ca/static/photobook/2025-Kfir-Rousso-gr10-147.jpg" alt="Dr. Marina Blue">
 <div class="team-membertxt">
     <h3>KFIR</h3>
-    <p>Sigma Programmer</p>
+    <pre>Programmer
+Website Dev
+Engineer
+    </pre>
     </div>
   </div>
     <div class="team-memberdesctxt">
@@ -982,11 +1053,15 @@ position: absolute;
     <img src="https://links.renertschool.ca/static/photobook/2025-Hayden-Shaigec-gr10-566.jpg" alt="Captain Coral">
 <div class="team-membertxt">
     <h3>HAYDEN</h3>
-    <p>Team Captain</p>
+    <pre>Team Captain
+Cad Designer
+Engineer
+Drive Coach
+    </pre>
   </div>
   </div>
   <div class="team-memberdesctxt">
-    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+    <p>Not true</p>
   </div>
 </div>
 <div class="team-memberdesc">
@@ -994,11 +1069,14 @@ position: absolute;
     <img src="https://links.renertschool.ca/static/photobook/2025-Simon-Gidrewicz-gr10-502.jpg" alt="Sandy Shores">
     <div class="team-membertxt">
 <h3>SIMON</h3>
-    <p>Sigma Programmer</p>
+    <pre>Programmer
+Operator
+Website Dev
+    </p>
   </div>
   </div>
   <div class="team-memberdesctxt">
-    <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+    <p>Okay it’s prob why my code ain’t workin</p>
   </div>
 </div>
 <div class="team-memberdesc">
@@ -1006,11 +1084,14 @@ position: absolute;
     <img src="https://links.renertschool.ca/static/photobook/2025-Eshan-Saini-gr10-600.jpg" alt="Sandy Shores">
 <div class="team-membertxt">
     <h3>Eshan</h3>
-    <p>Kinda Weird</p>
+    <pre>Engineer
+CAD Designer
+Outreach
+    </pre>
   </div>
 </div>
 <div class="team-memberdesctxt">
-  <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+  <p>Cristano Ronaldo Sewey</p>
 </div>
 </div>
 <div class="team-memberdesc">
@@ -1022,7 +1103,7 @@ position: absolute;
   </div>
 </div>
 <div class="team-memberdesctxt">
-  <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+  <p>DAMn</p>
 </div>
 </div>
 <div class="team-memberdesc">
@@ -1063,7 +1144,7 @@ Onclick="startSliding(-1)">
 
 
 </div>
-  <h2> Mentors in our journy:</h2>
+  <h2> Mentors in our journey:</h2>
 
   <div class="team-members2" style= "--mentor-gap: 7vw;">
     <div class="team-memberdesc" style= "--memberdesc-height: 500px;">
@@ -1071,11 +1152,11 @@ Onclick="startSliding(-1)">
           <img src="https://media.licdn.com/dms/image/v2/D4E03AQGAz3HKRpvI4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1679517406964?e=2147483647&v=beta&t=JYo07hJsYBKrLDDHe9r0W2_CGtISh6hh_lgkOVatxYc" alt="Sandy Shores">
       <div class="team-membertxt" style="--memebertxt-size : 2em;">
           <h3>Christian Hafalla</h3>
-          <p>Cad Mentor</p>
+          <p>Lead Mentor</p>
         </div>
       </div>
       <div class="team-memberdesctxt" style="--member-width: 40vw;" >
-        <p>THIS IS VERY GOOFY EVERYONE IS DUMB AND I AM THE BEST"</p>
+        <p>Chris is a dedicated mentor whose passion for robotics inspires every student they meet. They combine technical expertise with patient, hands-on guidance, helping members grow both their skills and confidence. Their unwavering support and enthusiasm make them an invaluable part of our team.</p>
       </div>
       </div>
       <div class="team-memberdesc" style= "--memberdesc-height: 500px;">
