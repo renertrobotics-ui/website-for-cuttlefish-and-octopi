@@ -33,17 +33,17 @@
     }
 
     body {
-      margin: 1;
-      font-family: var(--font-family-sans-serif);
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #333333;
-      background-color: #ffffff;
-      background-attachment: fixed;
+      margin: 0;
+  background-image: url("AI_cuttle_bg.png"); /* Your actual file */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed; /* THIS works */
     }
     
     .content {
-      background: linear-gradient(#fdfefe,#0f4ea7,#022f72);
+      /*background: linear-gradient(#fdfefe,#0f4ea7,#022f72);*/
       padding-top: 20px;
       min-height: 100vh;
       display: flex;
@@ -265,7 +265,7 @@
       justify-content: space-between;
       margin: 20px;
       padding: 30px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow around the cards */
+      box-shadow: 0 10px 10px rgba(0,0,0,1); /* Soft shadow around the cards */
       border-radius: 10%;
       gap: 5vw;
       flex-wrap: wrap;
@@ -661,12 +661,13 @@ Justify-content: center;
 
 }
 .bg-image2 {
+          background-attachment: fixed;
           position: absolute;
-          left: 350px;
-          width: 50%;
-          height: 90%;
+          left: var(--left,350px);
+          width: var(--sizewidth, 50%);
+          height: var(--sizeheight, 90%);
           object-fit: cover; /* makes image cover container */
-          z-index: 0;
+          z-index: var(--z,0);
         }
 
 .team-section > *:not(.bg-image2) {
